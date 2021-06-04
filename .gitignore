@@ -3,6 +3,7 @@
 
 # dotenv environment variables file
 .env
+.env.local
 .env.build
 
 # Dependency directories
