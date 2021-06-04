@@ -1,4 +1,4 @@
-import * from 'firebase/app';
+import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/storage";
 
@@ -13,7 +13,7 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 if (!firebase.apps.length) {
-  firebase.initializeApp(clientCredentials);
+  firebase.initializeApp(firebaseConfig);
 } else {
   // if already initialized, use that one
   firebase.app();
