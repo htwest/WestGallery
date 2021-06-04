@@ -11,6 +11,7 @@ const UploadForm = () => {
     let selected = e.target.files[0];
     if (selected && types.includes(selected.type)) {
       setFile(selected);
+      setError(null);
     } else {
       setFile(null);
       setError("Please Select an Image File");
@@ -20,7 +21,10 @@ const UploadForm = () => {
   return (
     <form>
       <input type="file" onChange={changeHandler} />
-      <div className="output">{error ? <div>{error}</div> : null}</div>
+      <div className="output">
+        {error ? <div>{error}</div> : null}
+        {file ? <div>{file.name}</div> : null}
+      </div>
     </form>
   );
 };
