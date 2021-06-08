@@ -14,3 +14,10 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.progress-bar {
+  height: 5px;
+  background: var(--primary);
+  margin-top: 20px;
+  font-size: larger;
+}
