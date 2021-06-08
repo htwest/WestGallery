@@ -13,15 +13,6 @@ var firebaseConfig = {
   appId: process.env.APP_ID,
 };
 
-// var firebaseConfig = {
-//   apiKey: "AIzaSyBZvatzJwQ8amwht9V5TKsy3HEyx7COhsU",
-//   authDomain: "west-gallery-b5290.firebaseapp.com",
-//   projectId: "west-gallery-b5290",
-//   storageBucket: "west-gallery-b5290.appspot.com",
-//   messagingSenderId: "520491801433",
-//   appId: "1:520491801433:web:bbb21aded01d0eb624ca48",
-// };
-
 // Initialize Firebase
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
