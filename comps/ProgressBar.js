@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { useStorage } from "../hooks/useStorage";
+import useStorage from "../hooks/useStorage";
 
-const ProgressBar = () => {
-  return <div classname="progress-bar">progress</div>;
+const ProgressBar = ({ file, setFile }) => {
+  const { url, progress } = useStorage(file);
+  console.log(progress, url);
+
+  return <div className="progress-bar">progress</div>;
 };
 
 export default ProgressBar;

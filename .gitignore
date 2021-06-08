@@ -6,6 +6,7 @@
 .env.local
 .env.build
 
+
 # Dependency directories
 node_modules/
 
