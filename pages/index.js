@@ -1,5 +1,5 @@
-import Image from "next/image";
 import UploadForm from "../comps/UploadForm";
+import ImageDisplay from "../comps/ImageDisplay";
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
       <h1>THE APP</h1>
       <div>Hello World</div>
       <UploadForm />
+      <ImageDisplay />
     </div>
   );
 }
