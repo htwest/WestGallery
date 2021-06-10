@@ -3,6 +3,7 @@ import ProgressBar from "./ProgressBar";
 
 const UploadForm = () => {
   const [file, setFile] = useState(null);
+  const [category, setCategory] = useState(null);
   const [error, setError] = useState(null);
 
   const types = ["image/png", "image/jpeg"];
@@ -11,12 +12,21 @@ const UploadForm = () => {
     // NOTE: currenly only selects one file at a time
     let selected = e.target.files[0];
     if (selected && types.includes(selected.type)) {
-      setFile(selected);
-      setError(null);
+      if (category) {
+        setFile(selected);
+        setError(null);
+      } else {
+        setError("Please Select an Image Category");
+      }
     } else {
       setFile(null);
       setError("Please Select an Image File");
     }
+  };
+
+  const categorySelector = (e) => {
+    let selected = e.target.value;
+    setCategory(selected);
   };
 
   return (
@@ -25,8 +35,15 @@ const UploadForm = () => {
       <div className="output">
         {error ? <div>{error}</div> : null}
         {file ? <div>{file.name}</div> : null}
-        {file ? <ProgressBar file={file} setFile={setFile} /> : null}
+        {file ? (
+          <ProgressBar file={file} category={category} setFile={setFile} />
+        ) : null}
       </div>
+      <input
+        type="text"
+        placeholder="Category"
+        onChange={categorySelector}
+      ></input>
     </form>
   );
 };

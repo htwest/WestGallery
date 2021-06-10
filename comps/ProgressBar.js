@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import useStorage from "../hooks/useStorage";
 
-const ProgressBar = ({ file, setFile }) => {
-  const { url, progress } = useStorage(file);
-  console.log(progress, url);
+const ProgressBar = ({ file, category, setFile }) => {
+  const { url, progress } = useStorage(file, category);
+  console.log(progress, url, category);
 
   useEffect(() => {
     if (url) {
