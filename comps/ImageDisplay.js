@@ -4,7 +4,7 @@ import Carousel from "./Carousel";
 const ImageDisplay = () => {
   // currently only gets image from 'testImages collection
   const { docs } = useFireStore("testImages");
-  // console.log(docs);
+  console.log(docs);
 
   return (
     <div className="img-display">

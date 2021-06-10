@@ -17,11 +17,7 @@ const useFireStore = (collection) => {
         });
         // group Images by category
         const grouped = sortImages(documents);
-
-        // console.log(grouped);
-        // console.log(documents);
-
-        setDocs(documents);
+        setDocs(grouped);
       });
 
     return () => unsub();
