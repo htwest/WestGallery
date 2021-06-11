@@ -31,19 +31,23 @@ const UploadForm = () => {
 
   return (
     <form>
-      <input type="file" onChange={changeHandler} />
-      <div className="output">
-        {error ? <div>{error}</div> : null}
-        {file ? <div>{file.name}</div> : null}
-        {file ? (
-          <ProgressBar file={file} category={category} setFile={setFile} />
-        ) : null}
-      </div>
       <input
+        className="category"
         type="text"
         placeholder="Category"
         onChange={categorySelector}
       ></input>
+      <label>
+        <input className="file-upload" type="file" onChange={changeHandler} />
+        <span>+</span>
+      </label>
+      <div className="output">
+        {error ? <div className="error">{error}</div> : null}
+        {file ? <div className="file">{file.name}</div> : null}
+        {file ? (
+          <ProgressBar file={file} category={category} setFile={setFile} />
+        ) : null}
+      </div>
     </form>
   );
 };
