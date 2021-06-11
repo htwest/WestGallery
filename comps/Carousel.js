@@ -1,6 +1,6 @@
 const Carousel = ({ docs }) => {
   console.log(docs);
-  return <div> THIS IS A CAROUSEL</div>;
+  return <div className="carousel"> THIS IS A CAROUSEL</div>;
 };
 
 export default Carousel;
