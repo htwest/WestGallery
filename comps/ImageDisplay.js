@@ -10,7 +10,10 @@ const ImageDisplay = () => {
     <div className="img-display">
       {docs
         ? docs.map((items) => (
-            <Carousel docs={items} key={Object.keys(items)[0]} />
+            <Carousel
+              docs={items[Object.keys(items)[0]]}
+              key={Object.keys(items)[0]}
+            />
           ))
         : null}
     </div>
