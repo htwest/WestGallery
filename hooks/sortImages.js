@@ -1,3 +1,5 @@
+// Sorts Images retrived from DB and catagorizes
+
 const sortImages = (docs) => {
   const sortedImages = [];
   const categories = [];

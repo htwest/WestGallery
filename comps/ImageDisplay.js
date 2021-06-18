@@ -11,6 +11,7 @@ const ImageDisplay = () => {
       {docs
         ? docs.map((items) => (
             <Carousel
+              className="carousel"
               docs={items[Object.keys(items)[0]]}
               key={Object.keys(items)[0]}
             />
