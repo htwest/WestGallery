@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import Swiper core and required modules
-import SwiperCore, { Pagination, Navigation } from "swiper/core";
+import SwiperCore, { Navigation, EffectCoverflow } from "swiper/core";
 
 // install Swiper modules
 SwiperCore.use(Navigation);
@@ -11,10 +11,18 @@ SwiperCore.use(Navigation);
 const Carousel = ({ docs }) => {
   console.log(docs);
 
+  const perView = (docs) => {
+    if (docs.length === 1) {
+      return 1;
+    } else {
+      return 3;
+    }
+  };
+
   return (
     <>
       <Swiper
-        slidesPerView={1}
+        slidesPerView={perView(docs)}
         spaceBetween={30}
         loop={true}
         navigation={true}
