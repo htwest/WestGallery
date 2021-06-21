@@ -42,7 +42,7 @@ form {
   opacity: 0;
 }
 
-.category {
+.category input {
   display: inline-block;
   position: relative;
   text-align: center;

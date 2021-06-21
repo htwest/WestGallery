@@ -31,12 +31,13 @@ const UploadForm = () => {
 
   return (
     <form>
-      <input
-        className="category"
-        type="text"
-        placeholder="Category"
-        onChange={categorySelector}
-      ></input>
+      <div className="category">
+        <input
+          type="text"
+          placeholder="Category"
+          onChange={categorySelector}
+        ></input>
+      </div>
       <label>
         <input className="file-upload" type="file" onChange={changeHandler} />
         <span>+</span>

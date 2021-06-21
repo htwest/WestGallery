@@ -29,10 +29,10 @@ const Carousel = ({ docs }) => {
         centeredSlides={true}
         className="mySwiper"
       >
-        {docs.map((doc) => (
+        {docs.map((doc, index) => (
           <SwiperSlide>
             <div className="slide">
-              <img src={doc.url} className="img-slide"></img>
+              <img src={doc.url} key={doc.id} className="img-slide"></img>
             </div>
           </SwiperSlide>
         ))}
