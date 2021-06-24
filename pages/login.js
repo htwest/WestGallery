@@ -1,7 +1,11 @@
 import { useEffect } from "react";
-import { useRouter } from "next/router;";
+import { useRouter } from "next/router";
 
 const login = () => {
+  const redirect = () => {
+    const router = useRouter();
+  };
+
   return (
     <div>
       <form>
