@@ -1,4 +1,5 @@
 import firebase from "firebase/app";
+import "firebase/auth";
 import "firebase/firestore";
 import "firebase/storage";
 
@@ -21,8 +22,9 @@ if (!firebase.apps.length) {
   firebase.app();
 }
 
+const projectAuth = firebase.auth();
 const projectStorage = firebase.storage();
 const projectFirestore = firebase.firestore();
 const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
-export { projectStorage, projectFirestore, timestamp };
+export { projectAuth, projectStorage, projectFirestore, timestamp };

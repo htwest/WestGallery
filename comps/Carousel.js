@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, EffectCoverflow } from "swiper/core";
 
 // install Swiper modules
-SwiperCore.use(EffectCoverflow);
+// SwiperCore.use(EffectCoverflow);
 
 const Carousel = ({ docs }) => {
   console.log(docs);
@@ -23,17 +23,17 @@ const Carousel = ({ docs }) => {
     <>
       <Swiper
         slidesPerView={perView(docs)}
-        spaceBetween={20}
+        spaceBetween={0}
         loop={true}
         centeredSlides={true}
-        effect={"coverflow"}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: false,
-        }}
+        // effect={"coverflow"}
+        // coverflowEffect={{
+        //   rotate: 50,
+        //   stretch: 0,
+        //   depth: 100,
+        //   modifier: 1,
+        //   slideShadows: false,
+        // }}
         className="mySwiper"
       >
         {docs.map((doc, index) => (
