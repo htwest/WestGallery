@@ -1,6 +1,7 @@
 import UploadForm from "../comps/UploadForm";
 import ImageDisplay from "../comps/ImageDisplay";
 import Header from "../comps/Header";
+import { AuthProvider } from "../comps/Auth";
 
 export default function Home() {
   return (
