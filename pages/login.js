@@ -1,13 +1,10 @@
-import { useState, useEffect, useContext } from "react";
-import { AuthContext } from "../comps/Auth";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { projectAuth } from "../firebase/config";
 
 const login = () => {
-  const { currentUser } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  // console.log(currentUser);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -19,7 +16,9 @@ const login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("works");
+    projectAuth.signInWithEmailAndPassword(email, password).then((cred) => {
+      console.log(cred.user);
+    });
   };
 
   return (
