@@ -5,12 +5,14 @@ import { AuthProvider } from "../comps/Auth";
 
 export default function Home() {
   return (
-    <div>
-      <div>WORK IN PROGRESS</div>
-      <h1>West-Gallery</h1>
-      <Header />
-      <ImageDisplay />
-      <UploadForm />
-    </div>
+    <AuthProvider>
+      <div>
+        <div>WORK IN PROGRESS</div>
+        <h1>West-Gallery</h1>
+        <Header />
+        <ImageDisplay />
+        <UploadForm />
+      </div>
+    </AuthProvider>
   );
 }
