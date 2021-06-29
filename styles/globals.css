@@ -124,3 +124,17 @@ label:hover {
   max-height: 300px;
   max-width: auto;
 }
+
+/* login styles */
+.login {
+  display: grid;
+  justify-content: center;
+}
+
+.username-login {
+  margin: 20px;
+}
+
+.password-login {
+  margin-bottom: 20px;
+}
