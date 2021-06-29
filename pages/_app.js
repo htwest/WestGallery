@@ -1,4 +1,6 @@
 import Layout from "../comps/Layout";
+import { AuthProvider } from "../comps/Auth";
+
 import "../styles/globals.css";
 
 // Import Swiper styles
@@ -8,9 +10,11 @@ import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <AuthProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </AuthProvider>
   );
 }
 
