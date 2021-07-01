@@ -9,7 +9,7 @@ import SwiperCore, { Navigation, EffectCoverflow } from "swiper/core";
 // SwiperCore.use(EffectCoverflow);
 
 const Carousel = ({ docs }) => {
-  console.log(docs);
+  // console.log(docs);
 
   const perView = (docs) => {
     if (docs.length === 1) {
