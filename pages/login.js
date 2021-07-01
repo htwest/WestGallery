@@ -21,6 +21,8 @@ const login = () => {
     });
   };
 
+  const handleSignOut = () => {};
+
   return (
     <div>
       <form className="login" onSubmit={handleSubmit}>
@@ -39,6 +41,11 @@ const login = () => {
         ></input>
         <button type="submit">Sumbit</button>
       </form>
+      <div className="sign-out">
+        <button className="sign-out-button" onClick={handleSignOut}>
+          SIGN OUT
+        </button>
+      </div>
     </div>
   );
 };

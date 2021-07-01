@@ -138,3 +138,9 @@ label:hover {
 .password-login {
   margin-bottom: 20px;
 }
+
+/* sign-out styles */
+.sign-out {
+  text-align: center;
+  margin-top: 100px;
+}
