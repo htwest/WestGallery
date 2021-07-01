@@ -20,7 +20,7 @@ export default function Home() {
       <Header />
       {currentUser ? <UploadForm /> : null}
       <ImageDisplay setSelectedImg={setSelectedImg} />
-      <Modal />
+      <Modal selectedImg={selectedImg} />
     </div>
   );
 }

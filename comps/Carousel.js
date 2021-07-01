@@ -8,7 +8,7 @@ import SwiperCore, { Navigation, EffectCoverflow } from "swiper/core";
 // install Swiper modules
 // SwiperCore.use(EffectCoverflow);
 
-const Carousel = ({ docs }) => {
+const Carousel = ({ docs, setSelectedImg }) => {
   // console.log(docs);
 
   const perView = (docs) => {
@@ -38,7 +38,7 @@ const Carousel = ({ docs }) => {
       >
         {docs.map((doc, index) => (
           <SwiperSlide className="slide-outer">
-            <div className="slide">
+            <div className="slide" onClick={() => setSelectedImg(doc.url)}>
               <img src={doc.url} key={doc.id} className="img-slide"></img>
             </div>
           </SwiperSlide>
