@@ -8,13 +8,13 @@ import { AuthContext } from "../comps/Auth";
 export default function Home() {
   const { currentUser } = useContext(AuthContext);
   console.log(currentUser);
+
   return (
     <div>
       <div>WORK IN PROGRESS</div>
-      <h1>West-Gallery</h1>
       <Header />
+      {currentUser ? <UploadForm /> : null}
       <ImageDisplay />
-      <UploadForm />
     </div>
   );
 }
