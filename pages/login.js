@@ -6,6 +6,8 @@ const login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const router = useRouter();
+
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -18,10 +20,15 @@ const login = () => {
     e.preventDefault();
     projectAuth.signInWithEmailAndPassword(email, password).then((cred) => {
       console.log(cred.user);
+      router.push("/");
     });
   };
 
-  const handleSignOut = () => {};
+  const handleSignOut = () => {
+    projectAuth.signOut().then(() => {
+      console.log("USER LOGGED OUT");
+    });
+  };
 
   return (
     <div>
