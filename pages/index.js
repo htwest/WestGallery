@@ -16,11 +16,14 @@ export default function Home() {
 
   return (
     <div>
-      <div>WORK IN PROGRESS</div>
-      <Header />
-      {currentUser ? <UploadForm /> : null}
-      <ImageDisplay setSelectedImg={setSelectedImg} />
-      <Modal selectedImg={selectedImg} />
+      <div>
+        <Header />
+        {currentUser ? <UploadForm /> : null}
+        <ImageDisplay setSelectedImg={setSelectedImg} />
+      </div>
+      {selectedImg ? (
+        <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+      ) : null}
     </div>
   );
 }
