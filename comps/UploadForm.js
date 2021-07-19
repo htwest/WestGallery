@@ -32,10 +32,14 @@ const UploadForm = ({ docs }) => {
 
   const categorySelector = (e) => {
     let selected = e.target.value;
+    if (selected === "Select") {
+      setNewCategory(false);
+    }
     if (selected === "New Category") {
       setNewCategory(true);
     } else {
       setCategory(selected);
+      setNewCategory(false);
     }
   };
 
@@ -44,6 +48,7 @@ const UploadForm = ({ docs }) => {
       <div>
         <label htmlFor="category">Choose an Image Category</label>
         <select name="category" onChange={categorySelector}>
+          <option>Select</option>
           {categories.map((cat) => (
             <option>{cat}</option>
           ))}
