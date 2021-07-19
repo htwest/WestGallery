@@ -55,7 +55,6 @@ const UploadForm = ({ docs }) => {
           <option>New Category</option>
         </select>
       </div>
-      <span />
       {newCategory ? (
         <div className="category">
           <input
