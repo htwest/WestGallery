@@ -1,10 +1,16 @@
 import { useState } from "react";
 import ProgressBar from "./ProgressBar";
 
-const UploadForm = () => {
+const UploadForm = ({ docs }) => {
   const [file, setFile] = useState(null);
   const [category, setCategory] = useState(null);
   const [error, setError] = useState(null);
+
+  const categories = [];
+  docs.forEach((cat) => {
+    categories.push(Object.keys(cat)[0]);
+  });
+  console.log(categories);
 
   const types = ["image/png", "image/jpeg"];
 
@@ -31,6 +37,7 @@ const UploadForm = () => {
 
   return (
     <form>
+      <div></div>
       <div className="category">
         <input
           type="text"

@@ -1,10 +1,6 @@
-import useFireStore from "../hooks/useFireStore";
 import Carousel from "./Carousel";
 
-const ImageDisplay = ({ setSelectedImg }) => {
-  // currently only gets image from 'testImages collection
-  const { docs } = useFireStore("testImages");
-
+const ImageDisplay = ({ setSelectedImg, docs }) => {
   return (
     <div className="img-display">
       {docs
