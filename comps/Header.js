@@ -1,12 +1,11 @@
 const Header = () => {
   return (
     <div className="header">
-      <h1>West-Gallery</h1>
       <p className="quote quote-one">
-        I doubted if I should ever come back. I took the one less traveled by,
+        Two roads diverged. I doubted if I should ever come back.
       </p>
-      <p className="quote quote-two">
-        {" "}
+      <p className="quote quote-two">I took the one less traveled by,</p>
+      <p className="quote quote-three">
         And that has made all the difference...
       </p>
     </div>

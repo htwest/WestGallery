@@ -9,7 +9,6 @@
 
 /* base styles & title */
 body {
-  font-family: "Noto Serif";
   color: var(--secondary);
   background-image: url("../public/SandBackground1.png");
 }
@@ -17,19 +16,28 @@ body {
   max-width: 960px;
   margin: 0 auto;
 }
-.title h1 {
-  color: var(--primary);
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  font-weight: normal;
+
+/* Header styles */
+
+.quote {
+  font-family: "Dancing Script", cursive;
+  font-size: 3vw;
+  text-align: left;
+  color: aliceblue;
 }
-.title h2,
-.title p {
-  text-align: center;
+
+.quote-one {
+  margin-top: 5%;
+  margin-left: 20%;
 }
-.title h2 {
-  margin-top: 60px;
-  font-size: 2.6rem;
+
+.quote-two {
+  margin-left: 25%;
+}
+
+.quote-three {
+  margin-bottom: 8%;
+  margin-left: 5%;
 }
 
 /* upload form styles */
@@ -103,25 +111,6 @@ label:hover {
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
   border: 3px solid white;
-}
-
-/* Header styles */
-
-.quote {
-  font-family: "Dancing Script", cursive;
-  font-size: 4em;
-  text-align: center;
-  color: aliceblue;
-}
-
-.quote-one {
-  margin-top: 100px;
-  margin-right: 200px;
-}
-
-.quote-two {
-  margin-bottom: 600px;
-  margin-left: 400px;
 }
 
 /* Corousel styles */
