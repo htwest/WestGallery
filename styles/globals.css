@@ -11,7 +11,7 @@
 body {
   font-family: "Noto Serif";
   color: var(--secondary);
-  background-image: url("../public/background-top.png");
+  background-image: url("../public/SandBackground1.png");
 }
 .App {
   max-width: 960px;
