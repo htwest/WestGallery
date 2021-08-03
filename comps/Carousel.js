@@ -30,6 +30,7 @@ const Carousel = ({ docs, setSelectedImg }) => {
       >
         {docs.map((doc, index) => (
           <SwiperSlide className="slide-outer">
+            <span className="helper" />
             <div
               className="slide-inner"
               onClick={() => setSelectedImg(doc.url)}
