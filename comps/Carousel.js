@@ -2,10 +2,10 @@ import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// import Swiper core and required modules
+// Import Swiper core and required modules
 import SwiperCore, { Navigation, EffectCoverflow } from "swiper/core";
 
-// install Swiper modules
+// Install Swiper modules (NOT CURRENTLY IMPLIMENTED)
 // SwiperCore.use(EffectCoverflow);
 
 const Carousel = ({ docs, setSelectedImg }) => {
@@ -23,22 +23,17 @@ const Carousel = ({ docs, setSelectedImg }) => {
     <>
       <Swiper
         slidesPerView={perView(docs)}
-        spaceBetween={0}
+        spaceBetween={10}
         loop={true}
         centeredSlides={true}
-        // effect={"coverflow"}
-        // coverflowEffect={{
-        //   rotate: 50,
-        //   stretch: 0,
-        //   depth: 100,
-        //   modifier: 1,
-        //   slideShadows: false,
-        // }}
         className="mySwiper"
       >
         {docs.map((doc, index) => (
           <SwiperSlide className="slide-outer">
-            <div className="slide" onClick={() => setSelectedImg(doc.url)}>
+            <div
+              className="slide-inner"
+              onClick={() => setSelectedImg(doc.url)}
+            >
               <img src={doc.url} key={doc.id} className="img-slide"></img>
             </div>
           </SwiperSlide>

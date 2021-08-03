@@ -117,10 +117,10 @@ label:hover {
 .slide-outer {
   display: flex;
   align-items: center;
-  margin-bottom: 200px;
+  margin-bottom: 10%;
 }
 
-.slide {
+.slide-inner {
   max-width: 500px;
   height: auto;
   overflow: hidden;
@@ -129,8 +129,9 @@ label:hover {
 }
 
 .img-slide {
-  max-height: 300px;
-  max-width: auto;
+  /* max-height: 100%; */
+  max-width: 100%;
+  height: auto;
 }
 
 /* login styles */
