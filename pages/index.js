@@ -23,12 +23,14 @@ export default function Home() {
     <div>
       <div>
         <Header />
-        {currentUser ? <UploadForm docs={docs} /> : null}
-        <ImageDisplay setSelectedImg={setSelectedImg} docs={docs} />
+        <div className="container">
+          {currentUser ? <UploadForm docs={docs} /> : null}
+          <ImageDisplay setSelectedImg={setSelectedImg} docs={docs} />
+        </div>
+        {selectedImg ? (
+          <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+        ) : null}
       </div>
-      {selectedImg ? (
-        <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
-      ) : null}
     </div>
   );
 }
