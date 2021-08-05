@@ -45,8 +45,8 @@ const UploadForm = ({ docs }) => {
 
   return (
     <form>
-      <div>
-        <label htmlFor="category">Choose an Image Category</label>
+      <div className="category">
+        <label className="category-label">Choose an Image Category</label>
         <select name="category" onChange={categorySelector}>
           <option>Select</option>
           {categories.map((cat) => (
@@ -56,7 +56,7 @@ const UploadForm = ({ docs }) => {
         </select>
       </div>
       {newCategory ? (
-        <div className="category">
+        <div className="new-category">
           <input
             type="text"
             placeholder="Category"
@@ -64,7 +64,19 @@ const UploadForm = ({ docs }) => {
           ></input>
         </div>
       ) : null}
-      <label>
+      <div>
+        <label for="story" className="story-label">
+          Add a story:
+        </label>
+        <textarea
+          id="story"
+          name="story"
+          rows="5"
+          cols="33"
+          placeholder="This was taken on..."
+        />
+      </div>
+      <label className="upload">
         <input className="file-upload" type="file" onChange={changeHandler} />
         <span>+</span>
       </label>

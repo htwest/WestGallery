@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
 
 :root {
-  --primary: #7683e6;
+  --primary: #1b235c;
   --secondary: #4e4e4e;
   --error: #ff4a4a;
 }
@@ -10,7 +10,6 @@
 /* base styles & title */
 body {
   color: var(--secondary);
-  /* background-image: url("../public/SandBackground1.png"); */
   background-color: black;
 }
 
@@ -26,9 +25,6 @@ body {
 .quote {
   padding-left: 10%;
   color: antiquewhite;
-}
-.quote-four {
-  /* padding-bottom: 20%; */
 }
 
 /* Container styles */
@@ -51,15 +47,39 @@ form {
   opacity: 0;
 }
 
-.category input {
+.category {
+  margin-bottom: 1%;
+}
+
+.new-category input {
   display: inline-block;
   position: relative;
   text-align: center;
   border-color: var(--primary);
   border-radius: 5px;
+  margin-bottom: 1%;
 }
 
+label,
+textarea {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+}
 label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.upload {
   display: block;
   width: 30px;
   height: 30px;
@@ -72,7 +92,7 @@ label {
   font-size: 24px;
 }
 
-label:hover {
+.upload:hover {
   background: var(--primary);
   color: white;
 }
