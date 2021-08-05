@@ -1,7 +1,6 @@
 import Layout from "../comps/Layout";
 import { AuthProvider } from "../comps/Auth";
 
-// import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.css";
 
 // Import Swiper styles
