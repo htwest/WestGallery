@@ -5,6 +5,7 @@ const UploadForm = ({ docs }) => {
   const [file, setFile] = useState(null);
   const [category, setCategory] = useState(null);
   const [newCategory, setNewCategory] = useState(false);
+  const [story, setStory] = useState(null);
   const [error, setError] = useState(null);
 
   const categories = [];
@@ -43,6 +44,16 @@ const UploadForm = ({ docs }) => {
     }
   };
 
+  const newCategorySelector = (e) => {
+    let selected = e.target.value;
+    setCategory(selected);
+  };
+
+  const storySelector = (e) => {
+    let selected = e.target.value;
+    setStory(selected);
+  };
+
   return (
     <form>
       <div className="category">
@@ -60,7 +71,7 @@ const UploadForm = ({ docs }) => {
           <input
             type="text"
             placeholder="Category"
-            onChange={categorySelector}
+            onChange={newCategorySelector}
           ></input>
         </div>
       ) : null}
@@ -74,6 +85,7 @@ const UploadForm = ({ docs }) => {
           rows="5"
           cols="33"
           placeholder="This was taken on..."
+          onChange={storySelector}
         />
       </div>
       <label className="upload">
@@ -84,7 +96,12 @@ const UploadForm = ({ docs }) => {
         {error ? <div className="error">{error}</div> : null}
         {file ? <div className="file">{file.name}</div> : null}
         {file ? (
-          <ProgressBar file={file} category={category} setFile={setFile} />
+          <ProgressBar
+            file={file}
+            category={category}
+            story={story}
+            setFile={setFile}
+          />
         ) : null}
       </div>
     </form>

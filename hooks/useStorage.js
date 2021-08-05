@@ -5,7 +5,7 @@ import {
   timestamp,
 } from "../firebase/config";
 
-const useStorage = (file, category) => {
+const useStorage = (file, category, story) => {
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState(null);
   const [url, setUrl] = useState(null);
@@ -28,7 +28,7 @@ const useStorage = (file, category) => {
         const url = await storageRef.getDownloadURL();
         const createdAt = timestamp();
         // Add properties to DB collection
-        collectionRef.add({ url, category, createdAt });
+        collectionRef.add({ url, category, story, createdAt });
         setUrl(url);
       }
     );
