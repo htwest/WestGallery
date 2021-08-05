@@ -1,7 +1,8 @@
-const ModalText = () => {
+const ModalText = ({ selectedStory }) => {
+  // console.log(selectedStory);
   return (
     <div className="modal-text">
-      <p>DOES THIS WORK</p>
+      <p>{selectedStory}</p>
     </div>
   );
 };

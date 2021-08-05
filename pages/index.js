@@ -18,6 +18,7 @@ export default function Home() {
   const { docs } = useFireStore("testImages");
 
   const [selectedImg, setSelectedImg] = useState(null);
+  const [selectedStory, setSelectedStory] = useState(null);
 
   return (
     <div>
@@ -25,10 +26,19 @@ export default function Home() {
         <Header />
         <div className="container">
           {currentUser ? <UploadForm docs={docs} /> : null}
-          <ImageDisplay setSelectedImg={setSelectedImg} docs={docs} />
+          <ImageDisplay
+            setSelectedImg={setSelectedImg}
+            docs={docs}
+            setSelectedStory={setSelectedStory}
+          />
         </div>
         {selectedImg ? (
-          <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+          <Modal
+            selectedImg={selectedImg}
+            selectedStory={selectedStory}
+            setSelectedImg={setSelectedImg}
+            setSelectedStory={setSelectedStory}
+          />
         ) : null}
       </div>
     </div>
