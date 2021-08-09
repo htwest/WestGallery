@@ -1,9 +1,12 @@
 const ModalText = ({ selectedStory }) => {
-  // console.log(selectedStory);
+  const handleClick = (e) => {
+    setText(false);
+  };
+
   return (
     <div className="modal-backdrop">
       <div className="modal-text">
-        <p>{selectedStory}</p>
+        <p onClick={handleClick}>{selectedStory}</p>
       </div>
     </div>
   );

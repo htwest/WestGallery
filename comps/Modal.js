@@ -7,7 +7,7 @@ const Modal = ({
   selectedStory,
   setSelectedStory,
 }) => {
-  const [text, setText] = useState(null);
+  const [text, setText] = useState(false);
 
   const handleClick = (e) => {
     if (e.target.classList.contains("backdrop")) {
@@ -15,14 +15,20 @@ const Modal = ({
       setSelectedStory(null);
       setText(null);
     } else {
-      setText(true);
+      if (!text) {
+        setText(true);
+      } else {
+        setText(false);
+      }
     }
   };
 
   return (
     <div className="backdrop" onClick={handleClick}>
       <img src={selectedImg} alt="modal-pic" />
-      {text ? <ModalText selectedStory={selectedStory} /> : null}
+      {text ? (
+        <ModalText className="text-modal" selectedStory={selectedStory} />
+      ) : null}
     </div>
   );
 };
