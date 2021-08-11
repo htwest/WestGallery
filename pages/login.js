@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { projectAuth } from "../firebase/config";
 
+import { Form } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+
 const login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,27 +30,47 @@ const login = () => {
   const handleSignOut = () => {
     projectAuth.signOut().then(() => {
       console.log("USER LOGGED OUT");
+      router.push("/");
     });
   };
 
   return (
     <div>
-      <form className="login" onSubmit={handleSubmit}>
+      <Form className="login" onSubmit={handleSubmit}>
         <h1>Login</h1>
-        <input
+        <Form.Group className="mb-3">
+          <Form.Label>Email Address</Form.Label>
+          <Form.Control
+            type="email"
+            placeholder="Enter Email"
+            onChange={handleEmailChange}
+          />
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            type="password"
+            placeholder="Password"
+            onChange={handlePassChange}
+          />
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+        {/* <input
           type="text"
           className="username-login"
           placeholder="EMAIL"
           onChange={handleEmailChange}
-        ></input>
-        <input
+        ></input> */}
+        {/* <input
           type="text"
           className="password-login"
           placeholder="PASSWORD"
           onChange={handlePassChange}
-        ></input>
-        <button type="submit">Sumbit</button>
-      </form>
+        ></input> */}
+        {/* <button type="submit">Sumbit</button> */}
+      </Form>
       <div className="sign-out">
         <button className="sign-out-button" onClick={handleSignOut}>
           SIGN OUT

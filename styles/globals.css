@@ -185,7 +185,8 @@ label {
 }
 
 /* login styles */
-.login {
+
+/* .login {
   display: grid;
   justify-content: center;
 }
@@ -196,7 +197,7 @@ label {
 
 .password-login {
   margin-bottom: 20px;
-}
+} */
 
 /* sign-out styles */
 .sign-out {
