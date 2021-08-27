@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
 
 :root {
-  --primary: #1b235c;
-  --secondary: #4e4e4e;
+  --primary: #daddf0;
+  --secondary: #cecdcd;
   --error: #ff4a4a;
 }
 
@@ -94,7 +94,7 @@ label {
 
 .upload:hover {
   background: var(--primary);
-  color: white;
+  color: black;
 }
 
 .output {
