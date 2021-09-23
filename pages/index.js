@@ -24,6 +24,7 @@ export default function Home() {
     <div>
       <div>
         <div className="header-container">
+          <img src="./HeaderBackground.png" />
           <Header />
         </div>
         <div className="gallery-container">

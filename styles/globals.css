@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cherish&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Birthstone&display=swap");
 
 :root {
   --primary: #daddf0;
@@ -16,21 +17,48 @@ body {
 
 /* Header styles */
 
-.header-container {
-  background-image: url("../public/HeaderBackground.png");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  padding-top: 4%;
-  padding-bottom: 5%;
-  margin: 0;
-}
-.quote {
-  padding-left: 10%;
-  font-family: "Cherish";
-  font-size: 1em;
-  color: antiquewhite;
+.header-container img {
+  width: 100%;
+  max-height: 100%;
 }
 
+.header {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.quote {
+  padding-left: 10%;
+  font-family: "Birthstone";
+  color: antiquewhite;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.quote-one {
+  transform: translate(50px);
+  font-size: 3vw;
+  width: 100%;
+}
+
+.quote-two {
+  transform: translate(200px);
+  font-size: 2vw;
+  width: 100%;
+}
+
+.quote-three {
+  transform: translate(100px);
+  font-size: 2vw;
+  width: 100%;
+}
+
+.quote-four {
+  transform: translate(-30px);
+  font-size: 3.5vw;
+  width: 100%;
+}
 /* Container styles */
 
 .gallery-container {
