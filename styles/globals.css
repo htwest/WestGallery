@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cherish&display=swap");
 
 :root {
   --primary: #daddf0;
@@ -15,21 +16,24 @@ body {
 
 /* Header styles */
 
-.header {
+.header-container {
   background-image: url("../public/HeaderBackground.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
   padding-top: 4%;
   padding-bottom: 5%;
+  margin: 0;
 }
 .quote {
   padding-left: 10%;
+  font-family: "Cherish";
+  font-size: 1em;
   color: antiquewhite;
 }
 
 /* Container styles */
 
-.container {
+.gallery-container {
   background-image: url("../public/BodyBackgroundFLIPPED.png");
   background-size: cover;
   padding: 10%;

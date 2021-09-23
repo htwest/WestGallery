@@ -23,8 +23,10 @@ export default function Home() {
   return (
     <div>
       <div>
-        <Header />
-        <div className="container">
+        <div className="header-container">
+          <Header />
+        </div>
+        <div className="gallery-container">
           {currentUser ? <UploadForm docs={docs} /> : null}
           <ImageDisplay
             setSelectedImg={setSelectedImg}
