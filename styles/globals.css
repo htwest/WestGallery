@@ -59,11 +59,13 @@ body {
   font-size: 3.5vw;
   width: 100%;
 }
+
 /* Container styles */
 
 .gallery-container {
+  transform: translateY(-4px);
   background-image: url("../public/BodyBackgroundFLIPPED.png");
-  background-size: cover;
+  background-size: contain;
   padding: 10%;
 }
 
@@ -183,6 +185,8 @@ label {
   color: #ccc;
   font-size: 1em;
 }
+
+/* Dislay styles */
 
 /* Corousel styles */
 .mySwiper {

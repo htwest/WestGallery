@@ -22,28 +22,26 @@ export default function Home() {
 
   return (
     <div>
-      <div>
-        <div className="header-container">
-          <img src="./HeaderBackground.png" />
-          <Header />
-        </div>
-        <div className="gallery-container">
-          {currentUser ? <UploadForm docs={docs} /> : null}
-          <ImageDisplay
-            setSelectedImg={setSelectedImg}
-            docs={docs}
-            setSelectedStory={setSelectedStory}
-          />
-        </div>
-        {selectedImg ? (
-          <Modal
-            selectedImg={selectedImg}
-            selectedStory={selectedStory}
-            setSelectedImg={setSelectedImg}
-            setSelectedStory={setSelectedStory}
-          />
-        ) : null}
+      <div className="header-container">
+        <img src="./HeaderBackground.png" />
+        <Header />
       </div>
+      <div className="gallery-container">
+        {currentUser ? <UploadForm docs={docs} /> : null}
+        <ImageDisplay
+          setSelectedImg={setSelectedImg}
+          docs={docs}
+          setSelectedStory={setSelectedStory}
+        />
+      </div>
+      {selectedImg ? (
+        <Modal
+          selectedImg={selectedImg}
+          selectedStory={selectedStory}
+          setSelectedImg={setSelectedImg}
+          setSelectedStory={setSelectedStory}
+        />
+      ) : null}
     </div>
   );
 }
