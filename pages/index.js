@@ -21,7 +21,7 @@ export default function Home() {
   const [selectedStory, setSelectedStory] = useState(null);
 
   return (
-    <div>
+    <div className="body">
       <div className="header-container">
         <img src="./HeaderBackground.png" />
         <Header />

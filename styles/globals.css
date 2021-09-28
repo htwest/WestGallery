@@ -13,6 +13,7 @@
 body {
   color: var(--secondary);
   background-color: black;
+  margin: 0;
 }
 
 /* Header styles */
@@ -24,48 +25,33 @@ body {
 
 .header {
   position: absolute;
-  top: 20px;
-  left: 30px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: header-fade-in ease-in 3s;
 }
 
 .quote {
-  padding-left: 10%;
   font-family: "Birthstone";
+  font-size: 2em;
   color: antiquewhite;
-  margin-bottom: 5px;
-  margin-top: 0;
-}
-
-.quote-one {
-  transform: translate(50px);
-  font-size: 3vw;
-  width: 100%;
-}
-
-.quote-two {
-  transform: translate(200px);
-  font-size: 2vw;
-  width: 100%;
-}
-
-.quote-three {
-  transform: translate(100px);
-  font-size: 2vw;
-  width: 100%;
-}
-
-.quote-four {
-  transform: translate(-30px);
-  font-size: 3.5vw;
-  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 /* Container styles */
 
 .gallery-container {
-  transform: translateY(-4px);
+  transform: translateY(-7px);
   background-image: url("../public/BodyBackgroundFLIPPED.png");
   background-size: contain;
+  background-repeat: repeat;
   padding: 10%;
 }
 
@@ -187,6 +173,9 @@ label {
 }
 
 /* Dislay styles */
+.img-display {
+  margin-top: 50vh;
+}
 
 /* Corousel styles */
 .mySwiper {
@@ -218,4 +207,13 @@ label {
 .img-slide {
   max-width: 100%;
   height: auto;
+}
+
+@keyframes header-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
