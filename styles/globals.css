@@ -174,6 +174,22 @@ label {
 
 /* Dislay styles */
 
+/* Fog styles */
+.fog-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.fog-container video {
+  height: 100%;
+  opacity: 0;
+  animation: fog-fade-in ease-in 3s forwards;
+}
+
 /* Corousel styles */
 .mySwiper {
   margin-bottom: 10%;
@@ -212,5 +228,14 @@ label {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fog-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
   }
 }

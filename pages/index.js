@@ -1,9 +1,16 @@
 import { useState } from "react";
 
+// Components
 import UploadForm from "../comps/UploadForm";
 import ImageDisplay from "../comps/ImageDisplay";
 import Header from "../comps/Header";
 import Modal from "../comps/Modal";
+import Fog from "../comps/Fog";
+
+// Fog Effects
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 // To get images
 import useFireStore from "../hooks/useFireStore";
@@ -24,6 +31,7 @@ export default function Home() {
     <div className="body">
       <div className="header-container">
         <img src="./Header.jpg" />
+        <Fog />
         <Header />
       </div>
       <div className="gallery-container">
