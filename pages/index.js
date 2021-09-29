@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className="body">
       <div className="header-container">
-        <img src="./HeaderBackground.png" />
+        <img src="./Header.jpg" />
         <Header />
       </div>
       <div className="gallery-container">

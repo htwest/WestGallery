@@ -1,5 +1,3 @@
-import ScrollAnimation from "react-animate-on-scroll";
-
 const Header = () => {
   return (
     <div className="header">
