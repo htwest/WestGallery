@@ -25,14 +25,14 @@ const login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     projectAuth.signInWithEmailAndPassword(email, password).then((cred) => {
-      console.log(cred.user);
+      // console.log(cred.user);
       router.push("/");
     });
   };
 
   const handleSignOut = () => {
     projectAuth.signOut().then(() => {
-      console.log("USER LOGGED OUT");
+      // console.log("USER LOGGED OUT");
       router.push("/");
     });
   };

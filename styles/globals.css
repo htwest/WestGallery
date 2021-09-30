@@ -9,14 +9,19 @@
   --error: #ff4a4a;
 }
 
-/* base styles & title */
+/* #######################
+  BASE STYLES
+####################### */
+
 body {
   color: var(--secondary);
   background-color: black;
   margin: 0;
 }
 
-/* Header styles */
+/* #######################
+  HEADER STYLES
+####################### */
 
 .header-container img {
   width: 100%;
@@ -61,7 +66,9 @@ body {
   margin-bottom: 0;
 }
 
-/* Container styles */
+/* #######################
+  GALLERY CONTAINER STYLES
+####################### */
 
 .gallery-container {
   transform: translateY(-7px);
@@ -71,7 +78,10 @@ body {
   padding: 10%;
 }
 
-/* upload form styles */
+/* #######################
+  UPLOAD FORM STYLES
+####################### */
+
 form {
   margin: 30px auto 10px;
   text-align: center;
@@ -142,14 +152,20 @@ label {
   color: var(--error);
 }
 
-/* progress bar styles */
+/* #######################
+  PROGRESS BAR STYLES
+####################### */
+
 .progress-bar {
   height: 5px;
   background: var(--primary);
   margin-top: 20px;
 }
 
-/* modal styles */
+/* #######################
+  MODAL STYLES
+####################### */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -188,22 +204,28 @@ label {
   font-size: 1em;
 }
 
-/* Dislay styles */
+/* #######################
+  FOG STYLES
+####################### */
 
-/* Fog styles */
 .fog-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 200%;
+  height: 150%;
+  z-index: 9000;
   overflow: hidden;
-  z-index: 100;
 }
 
-.fog-out {
-  height: 100%;
-  opacity: 0.5;
+.fog-min {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  z-index: 9000;
+  overflow: hidden;
   animation: fog-fade-out ease-out 5s forwards;
 }
 
@@ -213,7 +235,16 @@ label {
   animation: fog-fade-in ease-in 3s forwards;
 }
 
-/* Corousel styles */
+.fog-out {
+  height: 100%;
+  opacity: 0.5;
+  animation: fog-fade-out ease-out 5s forwards;
+}
+
+/* #######################
+  CAROUSEL STYLES
+####################### */
+
 .mySwiper {
   margin-bottom: 10%;
 }
@@ -245,6 +276,10 @@ label {
   height: auto;
 }
 
+/* #######################
+  ANIMATIONS
+####################### */
+
 @keyframes header-fade-in {
   50% {
     font-size: 2em;
@@ -252,6 +287,16 @@ label {
   100% {
     opacity: 1;
     font-size: 2em;
+  }
+}
+
+@keyframes header-fade-out {
+  50% {
+    font-size: 3em;
+  }
+  100% {
+    opacity: 0;
+    font-size: 3em;
   }
 }
 
@@ -266,19 +311,25 @@ label {
 
 @keyframes fog-fade-out {
   0% {
-    opacity: 0.5;
   }
   100% {
     opacity: 0;
+    z-index: 0;
   }
 }
 
-@keyframes header-fade-out {
-  50% {
-    font-size: 3em;
+/* #######################
+  MEDIA QUERIES
+####################### */
+
+@media screen and (max-width: 992px) {
+  form {
+    margin-top: 100%;
   }
-  100% {
-    opacity: 0;
-    font-size: 3em;
+}
+
+@media screen and (max-width: 400px) {
+  form {
+    margin-top: 200%;
   }
 }

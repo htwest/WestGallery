@@ -24,9 +24,9 @@ export default function Home() {
 
   return (
     <div className="body">
+      <Fog />
       <div className="header-container">
         <img src="./Header.jpg" />
-        <Fog />
         <Header />
       </div>
       <div className="gallery-container">

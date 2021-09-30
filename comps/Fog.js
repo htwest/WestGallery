@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 const Fog = () => {
   const [fade, setFade] = useState("fog-in");
+  const [min, setMin] = useState("fog-container");
 
   useEffect(() => {
     window.addEventListener("scroll", handleFade);
@@ -14,17 +15,17 @@ const Fog = () => {
     let scroll = window.scrollY;
     if (scroll > 50) {
       setFade("fog-out");
+      setMin("fog-min");
     }
     if (scroll < 50) {
       setFade("fog-in");
+      setMin("fog-container");
     }
   };
 
   return (
-    <div className="fog-container">
-      <video className={fade} autoPlay="autoplay" muted loop>
-        <source src="/Fog.mp4" type="video/mp4" />
-      </video>
+    <div className={min}>
+      <video className={fade} src="/Fog.mp4" autoPlay="autoplay" muted loop />
     </div>
   );
 };

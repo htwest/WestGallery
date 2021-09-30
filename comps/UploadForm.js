@@ -55,7 +55,7 @@ const UploadForm = ({ docs }) => {
   };
 
   return (
-    <form>
+    <form className="upload-form">
       <div className="category">
         <label className="category-label">Choose an Image Category</label>
         <select name="category" onChange={categorySelector}>
