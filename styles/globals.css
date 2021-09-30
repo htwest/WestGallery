@@ -23,7 +23,7 @@ body {
   max-height: 100%;
 }
 
-.header {
+.header-in {
   position: absolute;
   top: 0;
   left: 0;
@@ -34,12 +34,28 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: header-fade-in ease-in 3s;
+  font-size: 3em;
+  opacity: 0;
+  animation: header-fade-in ease-in 3s forwards;
+}
+
+.header-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  animation: header-fade-out ease-out 3s forwards;
 }
 
 .quote {
   font-family: "Birthstone";
-  font-size: 2em;
   color: antiquewhite;
   margin-top: 10px;
   margin-bottom: 0;
@@ -230,11 +246,12 @@ label {
 }
 
 @keyframes header-fade-in {
-  0% {
-    opacity: 0;
+  50% {
+    font-size: 2em;
   }
   100% {
     opacity: 1;
+    font-size: 2em;
   }
 }
 
@@ -253,5 +270,15 @@ label {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes header-fade-out {
+  50% {
+    font-size: 3em;
+  }
+  100% {
+    opacity: 0;
+    font-size: 3em;
   }
 }
