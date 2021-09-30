@@ -37,8 +37,10 @@ const UploadForm = ({ docs }) => {
       setNewCategory(false);
     }
     if (selected === "New Category") {
+      setError(null);
       setNewCategory(true);
     } else {
+      setError(null);
       setCategory(selected);
       setNewCategory(false);
     }
