@@ -7,11 +7,6 @@ import Header from "../comps/Header";
 import Modal from "../comps/Modal";
 import Fog from "../comps/Fog";
 
-// Fog Effects
-import AOS from "aos";
-import "aos/dist/aos.css";
-AOS.init();
-
 // To get images
 import useFireStore from "../hooks/useFireStore";
 
