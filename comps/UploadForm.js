@@ -57,7 +57,7 @@ const UploadForm = ({ docs }) => {
   };
 
   return (
-    <form className="upload-form">
+    <form>
       <div className="category">
         <label className="category-label">Choose an Image Category</label>
         <select name="category" onChange={categorySelector}>
@@ -77,9 +77,9 @@ const UploadForm = ({ docs }) => {
           ></input>
         </div>
       ) : null}
-      <div>
+      <div className="story-box">
         <label for="story" className="story-label">
-          Add a story:
+          Add A Story
         </label>
         <textarea
           id="story"
@@ -90,10 +90,12 @@ const UploadForm = ({ docs }) => {
           onChange={storySelector}
         />
       </div>
-      <label className="upload">
-        <input className="file-upload" type="file" onChange={changeHandler} />
-        <span>+</span>
-      </label>
+      <div className="upload-button">
+        <label className="upload">
+          <input className="file-upload" type="file" onChange={changeHandler} />
+          <span>+</span>
+        </label>
+      </div>
       <div className="output">
         {error ? <div className="error">{error}</div> : null}
         {file ? <div className="file">{file.name}</div> : null}
