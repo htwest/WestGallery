@@ -16,7 +16,6 @@ import { AuthContext } from "../comps/Auth";
 
 export default function Home() {
   const { currentUser } = useContext(AuthContext);
-  // currently only gets image from 'testImages collection
   const { docs } = useFireStore("Images");
 
   const [selectedImg, setSelectedImg] = useState(null);
