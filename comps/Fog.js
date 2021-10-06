@@ -25,7 +25,14 @@ const Fog = () => {
 
   return (
     <div className={min}>
-      <video className={fade} src="/Fog.mp4" autoPlay="autoplay" muted loop />
+      <video
+        className={fade}
+        src="/Fog.mp4"
+        autoPlay="autoplay"
+        playsInline
+        muted
+        loop
+      />
     </div>
   );
 };
