@@ -351,7 +351,6 @@ label {
 @keyframes fog-fade-in {
   0% {
     opacity: 0;
-    transform: translateX(100px);
   }
   100% {
     opacity: 0.5;
