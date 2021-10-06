@@ -380,11 +380,14 @@ label {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   form {
     margin-top: 200%;
   }
   .img-display {
     margin-top: 150%;
+  }
+  .fog-out {
+    transform: translateX(-50px);
   }
 }
