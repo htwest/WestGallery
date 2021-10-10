@@ -74,7 +74,6 @@ body {
   transform: translateY(-7px);
   background-image: url("../public/BodyBackground.jpg");
   background-size: contain;
-  background-repeat: repeat;
   padding: 10%;
 }
 
