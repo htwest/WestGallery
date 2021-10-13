@@ -1,31 +1,21 @@
-import React, { useRef, useState } from "react";
+import sortDocs from "../hooks/sortDocs";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation } from "swiper/core";
 
-// Import Swiper core and required modules
-import SwiperCore, { Navigation, EffectCoverflow } from "swiper/core";
+// Install Swiper modules
+SwiperCore.use(Navigation);
 
-// Install Swiper modules (NOT CURRENTLY IMPLIMENTED)
-// SwiperCore.use(EffectCoverflow);
-
-const Carousel = ({ docs, setSelectedImg, setSelectedStory }) => {
-  // console.log(docs);
-
-  const perView = (docs) => {
-    if (docs.length === 1) {
-      return 1;
-    } else {
-      return 3;
-    }
-  };
-
+const Carousel = ({ mobile, docs, setSelectedImg, setSelectedStory }) => {
   return (
     <>
       <Swiper
-        slidesPerView={perView(docs)}
+        slidesPerView={sortDocs(mobile, docs.length)}
         spaceBetween={10}
         loop={true}
         centeredSlides={true}
+        navigation={true}
         className="mySwiper"
       >
         {docs.map((doc, index) => (
@@ -35,7 +25,6 @@ const Carousel = ({ docs, setSelectedImg, setSelectedStory }) => {
               className="slide-inner"
               onClick={() => {
                 setSelectedImg(doc.url);
-                // console.log(doc.story);
                 setSelectedStory(doc.story);
               }}
             >

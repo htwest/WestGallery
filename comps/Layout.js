@@ -4,7 +4,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Image Gallery</title>
+        <title>CJW Photography</title>
       </Head>
       {children}
     </>
