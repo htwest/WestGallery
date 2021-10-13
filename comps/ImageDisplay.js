@@ -5,7 +5,7 @@ const ImageDisplay = ({ setSelectedImg, setSelectedStory, docs }) => {
   const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
-    if (window.innerWidth < 400) {
+    if (window.innerWidth < 425) {
       setMobile(true);
     }
   }, []);
